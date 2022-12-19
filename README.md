@@ -1,2 +1,5 @@
 # rock-paper-scissors
- game
+
+game
+
+This is a starter game for the Rock Paper Scissors game.
