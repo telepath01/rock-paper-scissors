@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="/resources/styles/style.css" rel="stylesheet" />
+    <script src="/resources/scripts/script.js" defer></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rock, Paper, Scissors Game</title>
   </head>
   <body>
-    <script src="./scripts/script.js"></script>
+    <div class="game-container">
+      <h1 class="header">Rock-Paper-Scissors Game</h1>
+
+      <div class="button-container">
+        <p class="choose-text">Make Your Selection</p>
+        <button class="rock-btn">Rock</button>
+        <button class="paper-btn">Paper</button>
+        <button class="scissors-btn">Scissors</button>
+      </div>
+      <div class="instructions">
+        <p class="instructions-text">
+          In this game you will be playin against the computer. Plaease make a
+          selection on the right. If your choice beats the computer's choice
+          then you winn that round. Who ever gets to 5 wins the game!
+        </p>
+      </div>
+      <div class="score-container">
+        <div class="player-score">Player Score</div>
+        <div class="computer-score">Computer Score</div>
+      </div>
+    </div>
   </body>
 </html>
