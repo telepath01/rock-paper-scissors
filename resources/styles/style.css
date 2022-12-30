@@ -129,8 +129,8 @@ button {
   width: 8rem;
 }
 .win-container {
-  display: grid;
-  grid-template-rows: 30% 1fr;
+  display: none;
+  grid-template-rows: 30% 1fr 1fr;
   background-color: green;
   position: absolute;
   height: 60vh;
@@ -146,10 +146,20 @@ button {
 }
 .win-score {
   font-size: 9rem;
-  background-color: blue;
+
   text-align: center;
   width: 30%;
   height: 50%;
-  margin-left: 35%;
+  margin-left: 33%;
   border-radius: 3rem;
+}
+
+.restart-btn {
+  background-color: white;
+  font-size: 2rem;
+  width: 20rem;
+  height: 4rem;
+  border: 1px solid black;
+  margin-left: 15rem;
+  cursor: pointer;
 }
