@@ -1,4 +1,5 @@
 'use strict';
+const buttons = document.querySelectorAll('button');
 
 const playerWinMsg = 'Player wins the game! ';
 const playerLoseMsg = 'Player lost the game! ';
@@ -11,6 +12,16 @@ function getComputerChoice() {
   let computerChoice =
     startValues[Math.floor(Math.random() * startValues.length)];
   return computerChoice;
+}
+function updateScore(messege) {
+  if (messege.includes(`${playerWinMsg}`)) {
+    playerScore++;
+    console.log(playerScore);
+  } else if (messege.includes(`${playerLoseMsg}`)) {
+    computerScore++;
+  }
+  console.log('player:', playerScore);
+  console.log('computer:', computerScore);
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -45,15 +56,21 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function game(num) {
-  for (let i = 0; i < num; i++) {
-    playRound('Rock', getComputerChoice());
-    console.log(messege);
-    if (messege.includes(`${playerWinMsg}`)) {
-      playerScore = i;
-    } else if (messege.includes(`${playerLoseMsg}`)) {
-      computerScore = i;
+buttons.forEach(button =>
+  button.addEventListener('click', function (e) {
+    if (e.target.classList.value === 'rock-btn') {
+      const playerChoice = 'rock';
+      // console.log('works');
+      playRound(playerChoice, getComputerChoice());
+    } else if (e.target.classList.value === 'paper-btn') {
+      const playerChoice = 'paper';
+      // console.log('paper');
+      playRound(playerChoice, getComputerChoice());
+    } else if (e.target.classList.value === 'scissors-btn') {
+      const playerChoice = 'scissors';
+      // console.log(playerChoice);
+      playRound(playerChoice, getComputerChoice());
     }
-  }
-  console.log(playerScore, computerScore);
-}
+    updateScore(messege);
+  })
+);
