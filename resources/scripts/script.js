@@ -1,5 +1,7 @@
 'use strict';
 const buttons = document.querySelectorAll('button');
+const playerScoreValue = document.querySelector('.player-score-value');
+const cpuScoreValue = document.querySelector('.cpu-score-value');
 
 const playerWinMsg = 'Player wins the game! ';
 const playerLoseMsg = 'Player lost the game! ';
@@ -20,8 +22,8 @@ function updateScore(messege) {
   } else if (messege.includes(`${playerLoseMsg}`)) {
     computerScore++;
   }
-  console.log('player:', playerScore);
-  console.log('computer:', computerScore);
+  cpuScoreValue.textContent = computerScore;
+  playerScoreValue.textContent = playerScore;
 }
 
 function playRound(playerSelection, computerSelection) {
