@@ -21,13 +21,24 @@
       <div class="instructions">
         <p class="instructions-text">
           In this game you will be playin against the computer. Plaease make a
-          selection on the right. If your choice beats the computer's choice
-          then you winn that round. Who ever gets to 5 wins the game!
+          selection on the left. If your choice beats the computer's choice then
+          you winn that round. Who ever gets to 5 wins the game!
         </p>
       </div>
       <div class="score-container">
-        <div class="player-score">Player Score</div>
-        <div class="computer-score">Computer Score</div>
+        <div class="player-score">
+          <p class="player-score-heading">Player Score</p>
+          <div class="player-score-value">0</div>
+        </div>
+        <div class="computer-score">
+          <p class="cpu-score-heading">Computer Score</p>
+          <div class="cpu-score-value">0</div>
+        </div>
+      </div>
+      <div class="win-container" id="win-screen">
+        <div class="win-header">Player or Computer Wins!!!</div>
+        <div class="win-score">0</div>
+        <button class="restart-btn">Restart Game</button>
       </div>
     </div>
   </body>
